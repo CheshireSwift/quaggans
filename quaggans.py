@@ -76,7 +76,7 @@ def application(environ, start_response):
         start_response('200 OK', [("Content-type", "image/jpeg")])
         return [output.getvalue()]
     except (ValueError, AttributeError, KeyError) as e:
-        start_response('404 not found', [("Content-type", "text/plain")])
+        start_response('500 server error', [("Content-type", "text/plain")])
         return [b"No quaggans to be found :("]
 
 
