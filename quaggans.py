@@ -68,8 +68,6 @@ def application(environ, start_response):
         width = int(request_params["width"][0])
         height = int(request_params["height"][0])
         print("serving request! request_params = " + str(request_params), file=log_file)
-        width = int(width)
-        height = int(height)
 
         from io import BytesIO
         output = BytesIO()
